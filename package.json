@@ -15,6 +15,7 @@
   "author": "GeekMustHave",
   "license": "MIT",
   "dependencies": {
-    "asciidoctor.js": "^1.5.9"
+    "asciidoctor.js": "^1.5.9",
+    "chromium": "^2.1.0"
   }
 }

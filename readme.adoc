@@ -54,6 +54,37 @@ One of the purposes for this utility is to learn how to use Chromium for NODE ba
 
 This ADOC2View will be as simple a NODE CLI application as possible.
 
+=== ASCIIDoctor.JS
+
+This project uses Opal to transpile Asciidoctor, a modern implementation of AsciiDoc, 
+from Ruby to JavaScript to produce asciidoctor.js. 
+The asciidoctor.js script can be run on any JavaScript platform, including Node.js, Nashorn and, of course, a web browser.
+
+Reference: https://asciidoctor.org/docs/asciidoctor.js/
+
+User Manual: https://asciidoctor-docs.netlify.com/asciidoctor.js/
+
+GitHub Repository: https://github.com/asciidoctor/asciidoctor.js/
+
+
+Install in the project with
+
+  npm install --save asciidoctor.js
+
+=== Chromium
+
+node-chromium allows you to easily add Chromium binaries to your project and use it for automation, testing, web scraping or just for fun.
+
+The main benefit of using Chromium is that it doesn't include all the proprietary modifications made by Google, 
+thus it's more lightweight and more suitable for automation purposes
+
+Reference: https://www.npmjs.com/package/chromium
+
+Chromium developer docs:  https://chromium.googlesource.com/chromium/src.git/+/HEAD/docs/README.md
+
+Install in the project with the command below, there are quite a few dependancies and includes binaries.
+
+  npm install --save chromium
 
 
 

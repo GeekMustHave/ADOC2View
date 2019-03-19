@@ -447,7 +447,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_overview">1. Overview</a></li>
 <li><a href="#_introduction">2. Introduction</a></li>
-<li><a href="#_project_build">3. Project Build</a></li>
+<li><a href="#_project_build">3. Project Build</a>
+<ul class="sectlevel2">
+<li><a href="#_asciidoctor_js">3.1. ASCIIDoctor.JS</a></li>
+<li><a href="#_chromium">3.2. Chromium</a></li>
+</ul>
+</li>
 <li><a href="#_document_history">4. Document History</a></li>
 </ul>
 </div>
@@ -522,7 +527,56 @@ The lack of a parameter would show a list of all the ADOC files in the current d
 <div class="paragraph">
 <p>This ADOC2View will be as simple a NODE CLI application as possible.</p>
 </div>
+<div class="sect2">
+<h3 id="_asciidoctor_js">3.1. ASCIIDoctor.JS</h3>
+<div class="paragraph">
+<p>This project uses Opal to transpile Asciidoctor, a modern implementation of AsciiDoc,
+from Ruby to JavaScript to produce asciidoctor.js.
+The asciidoctor.js script can be run on any JavaScript platform, including Node.js, Nashorn and, of course, a web browser.</p>
+</div>
+<div class="paragraph">
+<p>Reference: <a href="https://asciidoctor.org/docs/asciidoctor.js/" class="bare">https://asciidoctor.org/docs/asciidoctor.js/</a></p>
+</div>
+<div class="paragraph">
+<p>User Manual: <a href="https://asciidoctor-docs.netlify.com/asciidoctor.js/" class="bare">https://asciidoctor-docs.netlify.com/asciidoctor.js/</a></p>
+</div>
+<div class="paragraph">
+<p>GitHub Repository: <a href="https://github.com/asciidoctor/asciidoctor.js/" class="bare">https://github.com/asciidoctor/asciidoctor.js/</a></p>
+</div>
+<div class="paragraph">
+<p>Install in the project with</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>npm install --save asciidoctor.js</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chromium">3.2. Chromium</h3>
+<div class="paragraph">
+<p>node-chromium allows you to easily add Chromium binaries to your project and use it for automation, testing, web scraping or just for fun.</p>
+</div>
+<div class="paragraph">
+<p>The main benefit of using Chromium is that it doesn&#8217;t include all the proprietary modifications made by Google,
+thus it&#8217;s more lightweight and more suitable for automation purposes</p>
+</div>
+<div class="paragraph">
+<p>Reference: <a href="https://www.npmjs.com/package/chromium" class="bare">https://www.npmjs.com/package/chromium</a></p>
+</div>
+<div class="paragraph">
+<p>Chromium developer docs:  <a href="https://chromium.googlesource.com/chromium/src.git/+/HEAD/docs/README.md" class="bare">https://chromium.googlesource.com/chromium/src.git/+/HEAD/docs/README.md</a></p>
+</div>
+<div class="paragraph">
+<p>Install in the project with the command below, there are quite a few dependancies and includes binaries.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>npm install --save chromium</pre>
+</div>
+</div>
 <div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -559,7 +613,7 @@ The lack of a parameter would show a list of all the ADOC files in the current d
 <div id="footer">
 <div id="footer-text">
 Version 2.1b<br>
-Last updated 2019-03-19 14:02:46 -0400
+Last updated 2019-03-19 14:35:45 -0400
 </div>
 </div>
 </body>
