@@ -1,0 +1,17 @@
+{
+  "name": "adoc2view",
+  "version": "1.0.0",
+  "description": "ASCIIDoctor to Browser Viewing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Browser",
+    "ASCIIDoctor",
+    "HTML",
+    "Generation"
+  ],
+  "author": "GeekMustHave",
+  "license": "MIT"
+}

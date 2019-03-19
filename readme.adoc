@@ -2,7 +2,7 @@
 John Schuster <John.schuster@PhoenixWorkgroup.com>
 v2.1b, 03/19/2019: Doco Type
 :Author: John HR Schuster
-:Company: Phoenix Learning Labs
+:Company: GeekMustHave
 :toc: left
 :toclevels: 4:
 :imagesdir: ./images
@@ -12,15 +12,47 @@ v2.1b, 03/19/2019: Doco Type
 :experimental:
 :source-hightlighter: coderay
 :icons: font
-:docdir: */documents
+:docdir: ./documents
 :github: https://github.com/GeekMustHave/Github repository
 :linkattrs:
 :seclinks:
-:title-logo-image: ./images/create-doco_gmh-blogArticle-cover.png
+:title-logo-image: ./images/create-doco_gmh-standard-cover.png
 
-Preamble paragraph goes here
+This is a simple NODE project to be called from the command line to read an ADOC file and launch a browser with the HTML version of the ADOC file.
+
+The project will use `asciidoctor.js` and `Chromium`.  The goal is an EXE file that can do the generation.
+
+A PDF version of this document is available at this link:./readme.pdf[ link]
+
+== Overview
+
+The ASCIIDoctor tool chain requires Ruby and GEM's to be installed.  
+After any change to the ADOC file the ASCIIDoctor command is needed to generate the HTML.
+A browser must then either be opened and or pointed to the generated HTML file.
+
+The ASCIIDoctor.JS can be installed as an extension to the Chrome browser and the ADOC file can be opened directly using the kbd:[ctrl+O] keys.
+
+One of the advantages of this approach is that as the ADOC file is saved the HTML in the Chrome browser is automatically updated.
+There is no need to run the ASCIIDoctor GEM to generate the HTML file.
+
+Not all users have or use the Chrome browser, so this solution may not work in all cases.
+
+NOTE: ASCIIDoctor.JS does a good enough job for rapid viewing of ADOC files, for more precision the ASCIIDoctor GEM should be used.
 
 == Introduction
+
+This ADOC2VIEW would be a command line utility that could be run from PowerShell, File Explorer or called from other programs.
+
+The optional parameter would be the name of the ADOC file to process.
+The lack of a parameter would show a list of all the ADOC files in the current directory.
+
+The result would be a Chromium browser would be opened and the ADOC file would be processed into an HTML file and displayed.
+
+One of the purposes for this utility is to learn how to use Chromium for NODE based applications.
+
+== Project Build
+
+This ADOC2View will be as simple a NODE CLI application as possible.
 
 
 
