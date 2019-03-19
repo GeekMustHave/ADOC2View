@@ -445,8 +445,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_introduction">1. Introduction</a></li>
-<li><a href="#_document_history">2. Document History</a></li>
+<li><a href="#_overview">1. Overview</a></li>
+<li><a href="#_introduction">2. Introduction</a></li>
+<li><a href="#_project_build">3. Project Build</a></li>
+<li><a href="#_document_history">4. Document History</a></li>
 </ul>
 </div>
 </div>
@@ -459,10 +461,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>The project will use <code>asciidoctor.js</code> and <code>Chromium</code>.  The goal is an EXE file that can do the generation.</p>
 </div>
+<div class="paragraph">
+<p>A PDF version of this document is available at this <a href="./readme.pdf"> link</a></p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_introduction">1. Introduction</h2>
+<h2 id="_overview">1. Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The ASCIIDoctor tool chain requires Ruby and GEM&#8217;s to be installed.
@@ -474,7 +479,10 @@ A browser must then either be opened and or pointed to the generated HTML file.<
 </div>
 <div class="paragraph">
 <p>One of the advantages of this approach is that as the ADOC file is saved the HTML in the Chrome browser is automatically updated.
-There is no need to run the ASCIIDoctor GEM to gerneate the HTML file.</p>
+There is no need to run the ASCIIDoctor GEM to generate the HTML file.</p>
+</div>
+<div class="paragraph">
+<p>Not all users have or use the Chrome browser, so this solution may not work in all cases.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -488,6 +496,11 @@ ASCIIDoctor.JS does a good enough job for rapid viewing of ADOC files, for more 
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction">2. Introduction</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>This ADOC2VIEW would be a command line utility that could be run from PowerShell, File Explorer or called from other programs.</p>
 </div>
@@ -498,11 +511,22 @@ The lack of a parameter would show a list of all the ADOC files in the current d
 <div class="paragraph">
 <p>The result would be a Chromium browser would be opened and the ADOC file would be processed into an HTML file and displayed.</p>
 </div>
+<div class="paragraph">
+<p>One of the purposes for this utility is to learn how to use Chromium for NODE based applications.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_project_build">3. Project Build</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This ADOC2View will be as simple a NODE CLI application as possible.</p>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_document_history">2. Document History</h2>
+<h2 id="_document_history">4. Document History</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Document History</caption>
@@ -535,7 +559,7 @@ The lack of a parameter would show a list of all the ADOC files in the current d
 <div id="footer">
 <div id="footer-text">
 Version 2.1b<br>
-Last updated 2019-03-19 13:54:11 -0400
+Last updated 2019-03-19 14:02:46 -0400
 </div>
 </div>
 </body>

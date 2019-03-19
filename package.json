@@ -13,5 +13,8 @@
     "Generation"
   ],
   "author": "GeekMustHave",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "asciidoctor.js": "^1.5.9"
+  }
 }
