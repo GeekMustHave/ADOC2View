@@ -20,9 +20,9 @@ v2.1b, 03/19/2019: Doco Type
 
 This is a simple NODE project to be called from the command line to read an ADOC file and launch a browser with the HTML version of the ADOC file.
 
-The project will use `asciidoctor.js` and `Chromium`.  The goal is an EXE file that can do the generation.
+The project will use `asciidoctor.js` and `Puppeteer`.  The goal is an EXE file that can do the generation.
 
-A PDF version of this document is available at this link:./readme.pdf[ link]
+A PDF version of this document is available at this link:./readme.pdf[ link] poop poop
 
 == Overview
 
@@ -71,21 +71,47 @@ Install in the project with
 
   npm install --save asciidoctor.js
 
-=== Chromium
+=== Puppeteer
 
-node-chromium allows you to easily add Chromium binaries to your project and use it for automation, testing, web scraping or just for fun.
+Puppeteer is a Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol.
+Puppeteer runs headless by default, but can be configured to run full (non-headless) Chrome or Chromium.
 
-The main benefit of using Chromium is that it doesn't include all the proprietary modifications made by Google, 
-thus it's more lightweight and more suitable for automation purposes
+Puppeteer provides very precise control over the Chromium browser.
 
-Reference: https://www.npmjs.com/package/chromium
+Reference: https://www.npmjs.com/package/puppeteer
 
-Chromium developer docs:  https://chromium.googlesource.com/chromium/src.git/+/HEAD/docs/README.md
+API Reference: https://github.com/GoogleChrome/puppeteer/blob/v1.13.0/docs/api.md
 
-Install in the project with the command below, there are quite a few dependancies and includes binaries.
+Chromium Command line Switches: https://peter.sh/experiments/chromium-command-line-switches/
 
-  npm install --save chromium
+Note: When you install Puppeteer, it downloads a recent version of Chromium (~170MB Mac, ~282MB Linux, ~280MB Win) that is guaranteed to work with the API. 
 
+Install in the project with
+
+   npm install --save puppeteer
+
+Puppeteer launches Chromium in headless mode. To launch a full version of Chromium, set the 'headless' option when launching a browser:
+
+  const browser = await puppeteer.launch({headless: false}); // default is true
+
+image::./images/sample.png[Code to open up browser display]
+
+== Considerations
+
+* The table of contents displays in the correct location depending on `:toc:` directive.
+
+
+== Issues
+
+* Browser windows opens with warning about 'Chrome is under control of automated test software'
+** You're looking for the `--disable-infobars` flag, Pass this to puppeteer.launch([options])
+
+* Links don't work
+
+* images don't work
+
+* if ADOC changes the browser windows doesn't automatically refresh.
+** fs.FSWatcher
 
 
 

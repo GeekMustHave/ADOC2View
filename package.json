@@ -16,6 +16,6 @@
   "license": "MIT",
   "dependencies": {
     "asciidoctor.js": "^1.5.9",
-    "chromium": "^2.1.0"
+    "puppeteer": "^1.13.0"
   }
 }
